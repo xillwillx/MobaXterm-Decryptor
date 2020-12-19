@@ -1,3 +1,6 @@
+## Account moved to: https://gitlab.com/illwill 
+
+ 
 ![alt text](https://i.imgur.com/bUzFv0g.png)
 ## What's it do?
 Decrypt stored [MobaXterm](https://mobaxterm.mobatek.net/) passwords from the commandline. Utilizes decryption classes from [HyperSine](https://github.com/HyperSine/how-does-MobaXterm-encrypt-password). I couldnt get his version working originally so rewrote some parts in order to understand what the code was doing. This script currently doesnt decode passwords encrypted with a masterpassword (option not available in free version of MobaXterm anyways).
