@@ -94,20 +94,20 @@ class MobaXtermCrypto:
 
 
 print(f'''
-  __  __       _          __  ___                      
- |  \/  | ___ | |__   __ _\ \/ / |_ ___ _ __ _ __ ___  
- | |\/| |/ _ \| '_ \ / _` |\  /| __/ _ \ '__| '_ ` _ \ 
+  __  __       _          __  ___
+ |  \/  | ___ | |__   __ _\ \/ / |_ ___ _ __ _ __ ___
+ | |\/| |/ _ \| '_ \ / _` |\  /| __/ _ \ '__| '_ ` _ \
  | |  | | (_) | |_) | (_| |/  \| ||  __/ |  | | | | | |
  |_|__|_|\___/|_.__/ \__,_/_/\_\\__\____|_|  |_| |_| |_|
- |  _ \  ___  ___ _ __ _   _ _ __ | |_ ___  _ __       
- | | | |/ _ \/ __| '__| | | | '_ \| __/ _ \| '__|      
- | |_| |  __/ (__| |  | |_| | |_) | || (_) | |         
- |____/ \___|\___|_|   \__, | .__/ \__\___/|_|         
+ |  _ \  ___  ___ _ __ _   _ _ __ | |_ ___  _ __
+ | | | |/ _ \/ __| '__| | | | '_ \| __/ _ \| '__|
+ | |_| |  __/ (__| |  | |_| | |_) | || (_) | |
+ |____/ \___|\___|_|   \__, | .__/ \__\___/|_|
                        |___/|_|
- 
+
       by illwill - decryption class by HyperSine\n''')
 
-if len(sys.argv) < 5: 
+if len(sys.argv) < 5:
     print(f"Usage:\n")
     print(f"From inifile:")
     print(f"    MobaDecrypt.py Computer Username SessionP Hash\n")
@@ -123,14 +123,14 @@ else:
     print(f"[*] EncPass:  "+sys.argv[4])
 
 if len(sys.argv) == 5:
-    cipher = MobaXtermCrypto(sys.argv[1].encode('ansi'), sys.argv[2].encode('ansi') , sys.argv[3].encode('ansi'))
+    cipher = MobaXtermCrypto(sys.argv[1].encode('cp1252'), sys.argv[2].encode('cp1252') , sys.argv[3].encode('cp1252'))
     passw = cipher.DecryptCredential(sys.argv[4])
     print(f'[*] Password: %s' % passw.decode("ascii"))
-    sys.exit(1) 
+    sys.exit(1)
 if len(sys.argv) == 7:
     print(f"[*] Host/IP:  "+sys.argv[5])
     print(f"[*] User:     "+sys.argv[6])
-    cipher = MobaXtermCrypto(sys.argv[1].encode('ansi'), sys.argv[2].encode('ansi') , sys.argv[3].encode('ansi'))
-    passw = cipher.DecryptPassword(sys.argv[4], sys.argv[5].encode('ansi'), sys.argv[6].encode('ansi'))
+    cipher = MobaXtermCrypto(sys.argv[1].encode('cp1252'), sys.argv[2].encode('cp1252') , sys.argv[3].encode('cp1252'))
+    passw = cipher.DecryptPassword(sys.argv[4], sys.argv[5].encode('cp1252'), sys.argv[6].encode('cp1252'))
     print(f'[*] Password: %s' % passw.decode("ascii"))
-    sys.exit(1) 
+    sys.exit(1)
